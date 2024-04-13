@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(130deg, #ff355a, #a91acc, #48a5fb);
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #424242;
+    width: min(80%, 800px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 48px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: "input input input input input input button";
+    gap: 15px;
+    position: relative;
+}
+
+form input {
+    grid-area: input;
+    background: inherit;
+    border: 1px solid #c7c7c7;
+    padding: 8px;
+    box-shadow: 0 0 3px #c7c7c7;
+    color: #c7c7c7;
+    font-size: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+form input:focus {
+    outline: 0;
+    border: 2px solid #50abc8
+}
+
+form span {
+    position: absolute;
+    background: #424242;
+    padding: 5px;
+    color: #50abc8;
+    top: -15px;
+    left: 5px;
+    z-index: 1;
+    visibility: hidden;
+    ;
+}
+
+input:focus+span {
+    visibility: visible;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+/* IE 10+ */
+form input:focus::placeholder {
+    color: transparent
+}
+
+form button {
+    grid-area: button;
+    border: 1px solid #50abc8;
+    cursor: pointer;
+    background-color: #50abc8;
+    color: #c7c7c7;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+section div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: #c7c7c7;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+section label {
+    font-size: 20px;
+    color: #424242;
+    flex-grow: 1;
+}
+
+section input {
+    accent-color: #50abc8;
+}
+
+section input:checked+label {
+    text-decoration: line-through;
+}
