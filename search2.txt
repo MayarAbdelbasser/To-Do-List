@@ -1,0 +1,27 @@
+innerHTML vs createElement:
+-We can add elements to a DOM element by creating an element and appending it.
+-We can also manipulate an element’s HTML directly using innerHTML.
+-Using innerHTML is cleaner, especially when we start adding in extra properties like classes and javascript events.
+-While clean, using innerHTML reparses and recreates all DOM nodes inside the div element and is less efficient than simply appending a new element to the div.
+  But in some cases createElement is the more performant choice.
+-However, innerHTML does have an advantage when we want to do multiple things to an element.
+-If we are creating a complex or dynamic HTML structure, using createElement to build the structure programmatically is generally more flexible and efficient. 
+ This method allows for better control over the elements being created and their attributes.
+-On the other hand, if we need to insert a large HTML snippet or content that is already in string format, using innerHTML can be a more convenient and concise approach. 
+ However, it's important to be cautious when using innerHTML to avoid security vulnerabilities such as cross-site scripting (XSS) attacks.
+
+
+
+
+The For Of Loop:
+-The JavaScript for of statement loops through the values of an iterable object.
+-It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more.
+
+The Do While Loop:
+-The do while loop is a variant of the while loop. This loop will execute the code block once,
+ before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+The For In Loop:
+-The JavaScript for in statement loops through the properties of an Object,The for in loop iterates over an object.
+-The JavaScript for in statement can also loop over the properties of an Array.
+-It is better to use a for loop, a for of loop, or Array.forEach() when the order is important.
